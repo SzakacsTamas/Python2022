@@ -1,2 +1,1 @@
-print("Hello World",end="\n------------\n")
-print("Hello World", "Helló világ!", 42, sep=" --- ")
+C:\Users\Public\Programs\mblock\resources\app\mlink-v2\exec\python-env\win
