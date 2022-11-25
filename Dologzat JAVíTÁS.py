@@ -37,4 +37,8 @@ while betu !="":
 
     print(szoveg)
 
-#7
+#8
+lista=szoveg.split(" ")
+lista.reverse()
+szoveg2=" ".join(lista)
+print(szoveg2)
