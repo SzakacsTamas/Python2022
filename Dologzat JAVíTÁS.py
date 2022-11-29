@@ -42,3 +42,20 @@ lista=szoveg.split(" ")
 lista.reverse()
 szoveg2=" ".join(lista)
 print(szoveg2)
+
+#print("almafa" * 5)
+
+
+#9
+
+jelek="'.!?-:;,"
+
+for i in range(len(jelek)):
+    szoveg=szoveg.replace(jelek[i],"")
+print(szoveg)
+
+
+
+
+
+
