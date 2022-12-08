@@ -28,6 +28,6 @@ for e in l:
         l5.append(e)
 print(l5)
 
-l5=[e for e in l if e %5 ==0 ]
+l5=[e//15 for e in l if e %5 ==0 ]
 
 print(l5)
