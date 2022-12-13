@@ -1,9 +1,13 @@
-E=0
-V=0.0
-EV = input("Egész vagy Valós?")
-if EV == ("E"):
-    E= int(input("írj be egy egész számot"))
-    print(E*2)
-elif EV ==("V"):
-    V= float(input("írj be egy valós számot"))
-    print(V*2)
+import random
+
+  
+# list of items
+    List = [10, 20, 30, 40, 50, 40,
+        30, 20, 10]
+  
+# using the sample() method
+    UpdatedList = random.sample(List, 3)
+  
+# displaying random selections from 
+# the list without repetition
+    print(UpdatedList)
