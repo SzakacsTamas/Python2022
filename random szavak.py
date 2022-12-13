@@ -24,4 +24,4 @@ print(nagyLista)
 
 
 for e in nagyLista:
-    print(e[0].ljust(10),str(e[1]), rjust(4),"kg")
+    print(e[0].ljust(10),str(e[1]).rjust(4),"kg")
