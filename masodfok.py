@@ -52,6 +52,44 @@ def gyökTényezőSszorzat(a,x1,x2):
                 
                 
         
+def gyokTenyezosSzorzat(a,x1,x2):
+    if x1=="":
+        return "Nincs gyöktényezős alak"
+    elif x1==x2:
+        if x1<0: 
+            return str (a)+"(x + "+ str(-1*x1) + ")²"
+        elif x1>0:
+            return str (a)+"(x - "+ str(-1*x1) + ")²"
+        else:
+            return str (a)+"x²"
+
+    else:
+        if x1<0:
+            if x2<0:
+                return str (a)+"(x + " + str(-1*x1) + ")(x + " + str(-1*x2) + ")"
+            elif x2<0:
+                return str (a)+"(x + " + str(-1*x1) + ")(x - " + str(-1*x2) + ")"
+            else:
+                return str (a)+"(x + " + str(-1*x1) + ")x"
+
+        elif x1>0:
+             if x2<0:
+                return str (a)+"(x - " + str(-1*x1) + ")(x + " + str(-1*x2) + ")"
+            elif x2>0:
+                return str (a)+"(x - " + str(-1*x1) + ")(x - " + str(-1*x2) + ")"
+            else:
+                return str (a)+"(x - " + str(-1*x1) + ")x"
+        else:
+              if x2<0:
+                return str (a)+"x(x - " + str(-1*x1) + ")(x + " + str(-1*x2) + ")"
+            elif x2>0:
+                return str (a)+"x(x - " + str(-1*x1) + ")(x - " + str(-1*x2) + ")"
+                
+        
+    
+        
+    
+#a*x2+b*x+c
 
 
 
@@ -73,7 +111,11 @@ elif diszkriminans==0:
     megoldas=-b /(2*a)
     x1=megoldas
     x2=megoldas
+<<<<<<< HEAD
+    print("1 megoldas: {}".format(megoldas))
+=======
     print("1 megoldás: {}".format(megoldas))
+>>>>>>> 00909a26a2edc5ff321a9f5c075345ef515bc741
 else:
     x1=(-b+math.sqrt(diszkriminans)) / (2*a)
     x1=(-b-math.sqrt(diszkriminans)) / (2*a)
@@ -84,9 +126,14 @@ else:
 #print(gyok)
 print(egyenlet(a,b,c))
 
+
 #a*(x-x1)*(x-x2)=0
 
+<<<<<<< HEAD
+
+=======
 print(gyökTényezőSszorzat)
+>>>>>>> 00909a26a2edc5ff321a9f5c075345ef515bc741
 print(a)
 print(x1)
 print(x2)
