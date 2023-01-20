@@ -42,9 +42,23 @@ def beolvas():
     f.close()
     
 def kerdez():
-    print(kerdesek)
+    valasztott=random.choice(kerdesek)
+    print(valasztott)
+    rossz=[]
+    
+    for i in range(3):
+        temp=random.choice(kerdesek)
+        print(temp)
+        while temp not in rossz and temp != valasztott:
+            rossz.append(temp)
+        print(rossz)
+    print("-"*45)
+    print("Mit jelent: " + valasztott[0] + "?")
+    rossz.append(valasztott)
+    print(rossz)
 
 
+    
 beolvas()
 kerdez()
 #szavak=sokBeker()
