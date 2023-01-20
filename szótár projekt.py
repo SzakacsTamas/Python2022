@@ -43,7 +43,7 @@ def beolvas():
     
 def kerdez():
     valasztott=random.choice(kerdesek)
-    print(valasztott)
+    print("valasztott:",  valasztott)
     rossz=[]
     
     for i in range(3):
