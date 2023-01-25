@@ -71,15 +71,31 @@ def kerdez():
         i+=1
     print()
     valasz=input("Válassz: ")
-    hol=abc.index(valasz)
-    print(hol)
+    hol=4
     while hol >= 4:
-        
         try:
+            if valasz != "":
+                
+                hol=abc.index(valasz)
+            
+            
+            
+        except:
+            
             valasz=input("Válassz újra: ")
-            hol=abc.index(valasz)
-        except(e):
-            pass
+        else:
+            if hol >= 4:
+                valasz=input("Válassz újra: ")
+                #hol=abc.index(valasz)
+            
+    
+    
+    #print(valasztott)
+    #print(rossz[hol])
+    if valasztott[0] == rossz[hol][0]:
+        print("Helyes!")
+    else:
+        print("Rossz Válasz!")
         
 
     
