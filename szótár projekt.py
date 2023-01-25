@@ -100,7 +100,8 @@ def kerdez():
 
     
 beolvas()
-kerdez()
+for i in range(10):
+    kerdez()
 #szavak=sokBeker()
 
 
