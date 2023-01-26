@@ -92,16 +92,38 @@ def kerdez():
     
     #print(valasztott)
     #print(rossz[hol])
-    if valasztott[0] == rossz[hol][0]:
-        print("Helyes!")
-    else:
-        print("Rossz Válasz!")
-        
+    #if valasztott[0] == rossz[hol][0]:
+    #    print("Helyes!")
+    #else:
+    #    print("Rossz Válasz!")
+    return valasztott[0] == rossz[hol][0]
 
-    
-beolvas()
-for i in range(10):
-    kerdez()
+def menu():
+    beker=""
+    while beker != "0":
+        
+        print("-"*40)
+        print("Szótár Program\n")
+        print("1) Szavak Bevitele")
+        print("2) Feleltetés")
+        print("0) Kilépés")
+        beker=input("Válassz:")
+
+
+menu()
+#Feleltetés    
+#beolvas()
+#lil_A=[]
+#for i in range(10):
+#    lil_A.append(kerdez())
+
+#print()
+#print("Vége")
+
+#print(lil_A.count(True),"Jó válaszod lett")
+#print("{:.0%}".format(lil_A.count(True)/len(lil_A)))
+
+#adatbekérés
 #szavak=sokBeker()
 
 

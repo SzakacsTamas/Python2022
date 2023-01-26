@@ -3,3 +3,8 @@ Door Ajtó
 Window Ablak
 Love Szeretet
 Keyboard Billentyûzet
+Orange Narancs
+Peach Barack
+Cat Macska
+Dog Kutyus
+Cow Tehén
