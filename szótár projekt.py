@@ -109,7 +109,26 @@ def menu():
         print("0) Kilépés")
         beker=input("Válassz:")
 
+        if beker == "1":
+            #adatbekerésé
+            szavak=sokBeker()
+            filebaIr(szavak)
 
+        elif beker == "2":
+            #Feleltetés    
+            beolvas()
+            lil_A=[]
+            for i in range(10):
+                lil_A.append(kerdez())
+
+            #print()
+            #print("Vége")
+
+            #print(lil_A.count(True),"Jó válaszod lett")
+            print("Az eredmény: {:.0%}".format(lil_A.count(True)/len(lil_A)))
+
+        
+         
 menu()
 #Feleltetés    
 #beolvas()
