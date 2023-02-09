@@ -50,7 +50,24 @@ for sorszam,betu in enumerate(versenyzoValasza):
 
 print("\t (A versenyző helyes válaszai)")
 
+feladat=int(input("5.Feladat: a Feladat sorszáma= "))
 
+db=0
+
+for e in valaszok:
+    if e[1][feladat] == helyes[feladat]:
+        db+=1
+
+
+print("A feladatra {0} fő, a versenyzők {1}-a adott helyes választ.".format(db,db/len(valaszok)))
+    
+
+
+
+
+
+    
+    
 
 
 
