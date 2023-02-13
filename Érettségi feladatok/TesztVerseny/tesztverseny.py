@@ -81,15 +81,25 @@ print("A feladatra {0} fő, a versenyzők {1:.2%}-a adott helyes választ.".form
     
 
 f=open("pontok.txt","w")
+
+eredmenyek=[]
 for e in valaszok:
     pont=pontSzamit(e[1],helyes)
     
     f.write(e[0] + " " + str(pont)+ "\n")
+    eredmenyek.append([pont, e[0]])
 
 f.close()
 
+#eredmenyek.sort()
+#eredmenyek.reverse()
+#print(eredmenyek[:10])
 
-    
+csakPontok=set()
+for e in eredmenyek:
+    csakPontok.add(e[0])
+
+print(csakPontok)[-3:]
     
 
 
