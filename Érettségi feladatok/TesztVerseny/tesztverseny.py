@@ -99,7 +99,7 @@ csakPontok=set()
 for e in eredmenyek:
     csakPontok.add(e[0])
 
-print(csakPontok)[-3:]
+print(list(csakPontok)[-3:])
     
 
 
