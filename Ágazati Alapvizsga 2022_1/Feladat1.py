@@ -13,4 +13,4 @@ while type(szam) != int:
 try:
     print(szoveg[szam-1]*szam)
 except:
-    print("Nincs ilyen szám")
+    print("Nincs ilyen betű")

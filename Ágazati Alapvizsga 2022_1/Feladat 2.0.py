@@ -1,0 +1,3 @@
+import haromszog
+
+haromszog.haromszog
