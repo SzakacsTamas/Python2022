@@ -1,5 +1,6 @@
 def ado(adosav,alapterulet):
     ar=0
+    alapterulet=int(alapterulet)
     if adosav == "A":
         ar=int(arak[0])*alapterulet
     #print(arak)
