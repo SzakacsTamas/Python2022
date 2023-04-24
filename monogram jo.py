@@ -7,28 +7,32 @@ class forgato:
     canvas=0
     vonalak=[]
     szog=0
-    szogSebesseg=0.5
+    szogSebesseg=0.1
+    színek=[]
     def __init__(self,canvas,vonalak):
         self.canvas=canvas
         self.vonalak=vonalak
         for i,betu in  enumerate (self.vonalak):
     
             betu += betu[:2]
-            betu = nagyit(betu,10)
+            betu = self.nagyit(betu,1)
            
             self.vonalak[i]=self.eltol(betu,200,200)
+
+        self.kozepSzamol()
+
 
     def rajzol(self):
         canvas.delete("all")
         self.szog+=self.szogSebesseg
         #szog+=0.5
         #print(szog)
-        for betu in self.vonalak:
-            betu =self.eltol(betu,-kozep[0],-kozep[1])
+        for i,betu in enumerate(self.vonalak):
+            betu =self.eltol(betu,-self.kozep[0],-self.kozep[1])
             betu =self.forgat(betu,self.szog)
-            betu =self.eltol(betu,kozep[0],kozep[1])
+            betu =self.eltol(betu,self.kozep[0],self.kozep[1])
             
-            self.canvas.create_line(betu, fill="black", width=5)
+            self.canvas.create_line(betu, fill=self.színek[i], width=5)
 
 
     def eltol(self,pontok, x, y):
@@ -59,7 +63,17 @@ class forgato:
                 vissza.append(y)
         return vissza
 
-               
+    def kozepSzamol(self):        
+        self.kozep=[0,0]
+        db=0
+        for betu in MATYI:
+            xK=betu[::2]
+            yK=betu[1::2]
+            self.kozep[0]+=sum(xK)
+            self.kozep[1]+=sum(yK)
+            db+=len(xK)
+        self.kozep[0]/=db
+        self.kozep[1]/=db   
 
 
 
@@ -74,7 +88,7 @@ win.geometry("1500x1000")
 # Create a canvas widget
 canvas=Canvas(win, width=900, height=300)
 canvas.configure(bg="lightgray")
-canvas.pack(fill = BOTH, expand = 1)
+canvas.pack(fill =BOTH, expand = 1)
 
 # Add a line in canvas widget
 
@@ -98,20 +112,10 @@ MATYI = [#M
         [710,10,730,10,730,170,710,170,710,10]]
 
 elso=forgato(canvas,MATYI)
+elso.színek=["blue","blue","blue","red","blue","blue","red","black","green"]
 
 
 
-
-kozep=[0,0]
-db=0
-for betu in MATYI:
-    xK=betu[::2]
-    yK=betu[1::2]
-    kozep[0]+=sum(xK)
-    kozep[1]+=sum(yK)
-    db+=len(xK)
-kozep[0]/=db
-kozep[1]/=db
 
 szog=0
 while True:
