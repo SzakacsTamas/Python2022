@@ -21,6 +21,7 @@ class forgato:
 
         self.kozepSzamol()
 
+ 
 
     def rajzol(self):
         canvas.delete("all")
@@ -45,10 +46,12 @@ class forgato:
         return vissza
 
     def nagyit(self,pontok, meret = 1):
+    
         vissza = []
         for e in pontok:
                 vissza.append(e * meret)
         return vissza
+        
 
     def forgat(self,pontok, szog):
         vissza = []
@@ -112,7 +115,7 @@ MATYI = [#M
         [710,10,730,10,730,170,710,170,710,10]]
 
 elso=forgato(canvas,MATYI)
-elso.színek=["blue","blue","blue","red","blue","blue","red","black","green"]
+elso.színek=["green","black","black","grey","blue","red"]
 
 
 
