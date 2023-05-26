@@ -36,3 +36,6 @@ body{
 p{
     text-align: justify;
 }
+#zaszlok img{
+    border: 1px solid black;
+}
