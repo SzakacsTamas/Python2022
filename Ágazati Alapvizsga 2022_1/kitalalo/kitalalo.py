@@ -23,9 +23,10 @@ for a in sorok:
 rejtett=random.choice(szavak)
 print(rejtett.szo)
 
-
+tippek=[]
 while True:
     be=input("Kérek egy szót(6.betűs): ")
+    tippek.append(be)
     if be=="stop":
         break
 
@@ -34,3 +35,8 @@ while True:
     if vissza ==be:
         break
     
+if tippek[-1]=="stop":
+    pass
+else:
+    print("{} tipeléssel sikerlüt kitaléáál".format(len(tippek)))
+
